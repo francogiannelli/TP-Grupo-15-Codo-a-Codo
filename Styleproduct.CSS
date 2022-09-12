@@ -1,0 +1,78 @@
+body {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center; /*Para que los distintos recuadros se muestren en la misma lineas (divs)*/
+    font-family: arial; /*Fuente de los recuadros*/
+  }
+  
+  #botones_navegacion {
+    color: #EFEFEF;
+    font-family: arial;
+    font: bold;
+  }
+
+  header {
+    background-color: #A9A9A9;
+    height: 100px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    box-shadow: 0 0 10px;
+  }
+
+  .filtro {
+    display: flex;
+    flex-direction: column;
+    margin-right: 70px;
+    font-size: large;
+  }
+
+  .etiqueta_filtro {
+    font-weight: bold;
+  }
+
+  #sub_categoria {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+
+  .filas_productos {
+    display: flex;
+  }
+  
+  #producto_individual {
+    padding: 10px; /*Padding dentro del recuedro*/
+    box-shadow: 0 0 5px gray; /*Sombra del recuadro*/
+    border-radius: 10px; /*Borde redondeado del recuadro*/
+    text-align: center; /*Alinea el contenido dentro del recuadrio*/
+    width: 250px; /*Ancho de las cajas - FIJO*/
+    margin: 10px; /*Espacio entre los recuadros*/
+    
+    
+  }
+  
+  #imagen_producto {
+    width: 80%; /*Ancho de la imagen que sea el 80% del recuadro*/
+    padding: 20px; /*Padding de la imagen para que no quede pegada al borde inferior*/
+    border-bottom: 1px solid rgba(85, 85, 85, 0.3); /*Agrego borde debajo de la imagen*/
+  }
+
+  #precio_producto {
+    color: #FF3B3F;
+  }
+
+  #descripcion_producto {
+    font-size: 80%;
+  }
+
+  #descripcion_producto_div {
+    height: 50%;
+  }
