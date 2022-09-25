@@ -1,6 +1,7 @@
 body {
     padding-top: 100px;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
     justify-content: center; /*Para que los distintos recuadros se muestren en la misma lineas (divs)*/
     font-family: arial; /*Fuente de los recuadros*/
   }
@@ -25,6 +26,8 @@ body {
   }
 
   .filtro {
+    grid-row-start: 1;
+    grid-row-end: 4;
     display: flex;
     flex-direction: column;
     margin-right: 70px;
@@ -43,26 +46,26 @@ body {
     margin-bottom: 20px;
   }
 
-
-  .filas_productos {
-    display: flex;
-  }
-  
   #producto_individual {
     padding: 10px; /*Padding dentro del recuedro*/
-    box-shadow: 0 0 5px gray; /*Sombra del recuadro*/
+    box-shadow: 0 0 7px rgba(128, 128, 128, 0.662); /*Sombra del recuadro*/
     border-radius: 10px; /*Borde redondeado del recuadro*/
     text-align: center; /*Alinea el contenido dentro del recuadrio*/
     width: 250px; /*Ancho de las cajas - FIJO*/
     margin: 10px; /*Espacio entre los recuadros*/
-    
+    display: grid;
+    grid-template-rows: 1fr 40px 40px 40px;
     
   }
   
   #imagen_producto {
     width: 80%; /*Ancho de la imagen que sea el 80% del recuadro*/
     padding: 20px; /*Padding de la imagen para que no quede pegada al borde inferior*/
-    border-bottom: 1px solid rgba(85, 85, 85, 0.3); /*Agrego borde debajo de la imagen*/
+  }
+
+  #codigo_producto {
+    border-top: 1px solid rgba(85, 85, 85, 0.3); /*Agrego borde debajo de la imagen*/
+    padding-top: 10px;
   }
 
   #precio_producto {
@@ -73,6 +76,29 @@ body {
     font-size: 80%;
   }
 
-  #descripcion_producto_div {
-    height: 50%;
+/*Puntos de corte responsive*/
+
+/*Primer punto: 1200px. Reduce las columnas de la grilla a 2 y pone el filtro encima*/
+@media (max-width:1200px) {
+  body {
+    grid-template-columns: auto auto;
   }
+
+  .filtro {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }  
+} 
+
+/*Segundo punto: 767px. Reduce las columnas de la grilla a 1 y pone el filtro encima*/
+@media (max-width:767px) {
+    body {
+      grid-template-columns: auto;
+    }
+
+    .filtro{
+      grid-column-start: 1;
+      grid-column-end: 1;
+    }
+  }
+
