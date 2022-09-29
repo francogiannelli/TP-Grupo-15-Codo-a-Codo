@@ -80,47 +80,48 @@ body {
     justify-content:space-evenly;
     align-items: center;
     box-shadow: 0 0 10px;
+    z-index: 1; /*Coloco el header por encima de todos los elementos de la página*/
   }
 
   #btn-menu {
     display: none;
-}
+  }
 
-header label {
-    display: none;
-    width: 30px;
-    height: 30px;
-    padding: 10px;
-}
+  header label {
+      display: none;
+      width: 30px;
+      height: 30px;
+      padding: 10px;
+  }
 
-header label:hover {
-    cursor: pointer;
-    background: rgba(0, 0, 0, 0.3);
+  header label:hover {
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.3);
 
-}
-.menu ul{
-    margin: 0;
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
+  }
+  .menu ul{
+      margin: 0;
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+  }
 
-.menu li {
-    border-right: 0px solid #FFF;
-    border-left: 1px solid #FFF;
-}
+  .menu li {
+      border-right: 0px solid #FFF;
+      border-left: 1px solid #FFF;
+  }
 
-.menu li:hover {
-    background: rgba(0, 0, 0, 0.3);
-}
+  .menu li:hover {
+      background: rgba(0, 0, 0, 0.3);
+  }
 
-.menu li a {
-    display: block;
-    padding: 15px 20px;
-    color:#EFEFEF;
-    text-decoration: none;
-}
+  .menu li a {
+      display: block;
+      padding: 15px 20px;
+      color:#EFEFEF;
+      text-decoration: none;
+  }
 
 @media (max-width:767px) {
 
@@ -138,7 +139,6 @@ header label:hover {
         top: 100px;
         margin-left: -70%;
         transition: all 0.2s;
-        z-index: -1;
     }
 
     .menu ul {
@@ -157,6 +157,17 @@ header label:hover {
 
 
 /*Cuadricula de productos*/
+
+#icono_like {
+  color: #afafaf;
+  position: absolute;
+  font-size: 130%;
+  padding: 0.5%;
+}
+
+#icono_like:hover {
+  color: #FF3B3F;
+}
 
   .filtro {
     grid-row-start: 1;
@@ -192,6 +203,11 @@ header label:hover {
     border-right: 0px;
     margin-top: 20px;
     margin-bottom: 20px;
+    border-radius: 10px;
+  }
+
+  #sub_categoria:hover {
+    background-color: rgba(128, 128, 128, 0.195)
   }
 
   #producto_individual {
@@ -203,7 +219,10 @@ header label:hover {
     margin: 10px; /*Espacio entre los recuadros*/
     display: grid;
     grid-template-rows: 1fr 40px 40px 40px;
-    
+  }
+
+  #producto_individual:hover{
+    box-shadow: 0 0 20px rgba(128, 128, 128, 0.662); /*Sombra del recuadro*/
   }
   
   #imagen_producto {
