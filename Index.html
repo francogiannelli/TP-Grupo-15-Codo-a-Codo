@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="img/logopng.ico">
+    <link rel=StyleSheet href="styleindex.css" type="text/css">
+    <script src="https://kit.fontawesome.com/8c155eaf2e.js" 
+    crossorigin="anonymous"></script>
+    <style>
+        .contenedor{
+            display: flex;
+            height: 30px;
+            justify-content: center;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="buscar">
+          <input type="text" placeholder="Buscar" required>
+          <div class="btn">
+            <img src="lupa-de-busqueda.png" alt="Lupa busqueda">
+          </div>   
+        </div>
+        <input type="checkbox" id="btn-menu" sticky-top>
+        <label for="btn-menu"><img alt="boton menu" src="menu.png"></label>
+    
+        <div class="menu">
+            <ul>
+                <li><a href="Index.html">Inicio</a></li>
+                <li><a href="Product.html">Productos</a></li>
+                <li><a href="Register.html">Registrate</a></li>
+                <li><a href="Contact.html">Contacto</a></li>
+            </ul>
+          </div>
+    </header>
+
+    <main>
+        <div class="container">
+
+            <ul class="slider">
+                <li id="slide1">
+                    <img alt foto1 src="img/SEGURIDAD-NUESTRAFORTALEZA.jpg"/>
+                </li>
+                <li id="slide2">
+                    <img alt foto1 src="img/SLIDER_2020_dahuastore.jpg"/>
+                </li>
+                <li id="slide3">
+                    <img alt foto1 src="img/SLIDER_2020_reguvolt2.jpg"/>
+                </li>
+                <li id="slide4">
+                    <img alt foto1 src="img/SLIDER_SEAGATE-2021.jpg"/>
+                </li>
+            </ul>
+
+        <ul class="menuslide">
+            <li>
+                <a href="#slide1">1</a>
+            </li>
+            <li>
+                <a href="#slide2">2</a>
+            </li>
+            <li>
+                <a href="#slide3">3</a>
+            </li>
+            <li>
+                <a href="#slide4">4</a>
+            </li>
+        </ul>
+
+        </div>
+
+    </main>
+
+
+<div class="sección">
+     <aside>
+        <h2 style="text-align:center">Conocé nuestra nueva oferta de juegos</h2>
+        <img class="imagen_juego" src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2012/10/190387-repaso-todos-juegos-pokemon-1a.jpg?itok=s-YpS7T0"></img>
+        <div id='elem'></div>
+        <script src="main.js"></script>
+    </aside>
+    
+        
+    <div class="mas_vendidos">
+        <h2 style="text-align:center; background-color: rgba(126, 126, 126, 0.371); color: rgb(255, 255, 255); border-radius: 10px;">Lo mas vendido</h2>
+
+        <div class="productos_mas_vendidos">    
+        <div id="producto_individual">
+            <!--Icono Fav-->
+            <i class="fa-solid fa-heart" id="icono_like"></i>
+            <!--Imagen producto-->
+            <img id="imagen_producto" src="https://www.bigdipper.com.ar/File/Imagenes/Productos/86-BOX.png" alt=""></img>
+            <p id="codigo_producto">Código #241</p>
+            <h4 id="precio_producto">USD 5,50</h4>
+            <h3 id="descripcion_producto">Caja estanco metalica</h3>
+          </div>
+
+          <div id="producto_individual">
+            <!--Icono Fav-->
+            <i class="fa-solid fa-heart" id="icono_like"></i>
+            <!--Imagen producto-->
+            <img id="imagen_producto" src="https://www.bigdipper.com.ar/File/Imagenes/Productos/ARB1606.png" alt=""></img>
+            <p id="codigo_producto">Código #354</p>
+            <h4 id="precio_producto">USD 82,00</h4>
+            <h3 id="descripcion_producto">Balunera pasiva CCTV</h3>
+          </div>
+      
+          <div id="producto_individual">
+            <!--Icono Fav-->
+            <i class="fa-solid fa-heart" id="icono_like"></i>
+            <!--Imagen producto-->
+            <img id="imagen_producto" src="https://www.bigdipper.com.ar/File/Imagenes/Productos/BNC100.png" alt=""></img>
+            <p id="codigo_producto">Código #024</p>
+            <h4 id="precio_producto">USD 3,80</h4>
+            <h3 id="descripcion_producto">Cable patch BNC CCTV</h3>
+          </div>
+    </div>
+</div>
+
+</div>
+
+<footer>
+    <audio controls autoplay="on">
+        <source src="audio/JAK  IWRI   No Copyright Music  Música sin Copyright .mp3" type="audio/mpeg">
+    Tu explorador no es compatible con el audio de HTML 5.
+    </audio>
+    <br><br>
+    Medios de pago
+    <br><br>
+    <div class="contenedor">
+        <img src="img/tarjeta-naranja@2x.png" alt="naranja">
+        <img src="img/visa@2x.png" alt="visa">
+        <img src="img/tarjeta-shopping@2x.png" alt="shopping">
+        <img src="img/amex@2x.png" alt="amex">
+        <img src="img/rapipago@2x.png" alt="rapipago">
+        <img src="img/pagofacil@2x.png" alt="pagofacil">
+        <img src="img/mercadopago@2x.png" alt="mercadopago">
+        <img src="img/mastercard@2x.png" alt="mastercard">
+    </div>
+
+    <h4>Copyright NAF © - 2022. Todos los derechos reservados. Defensa de las y los consumidores. Para reclamos <a href="https://autogestion.produccion.gob.ar/consumidores">ingrese aquí</a></h4>
+</footer>
+
+</body>
+
+</html>

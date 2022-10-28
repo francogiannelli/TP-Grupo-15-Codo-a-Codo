@@ -1,0 +1,373 @@
+body {
+    padding-top: 140px;
+    justify-content: center;
+    font-family: arial;
+  }
+  
+  /*Boton buscar y barra de búsqueda*/
+  
+  .buscar{
+    position: fixed;
+    padding: 10px;
+    left: 40px;
+  }
+  
+        @media (max-width:767px) {
+          .buscar {
+            left: 90px;
+          }
+        }
+  
+  .buscar input{
+    width: 0px;
+    height: 34px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #000;
+    outline: none;
+    border: 1px solid #A9A9A9;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+  }
+  
+  header > .buscar > .btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #EFEFEF;
+    width: 55px;
+    height: 55px;
+    line-height: 65px;
+    text-align: center;
+    color: #FFF;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .buscar:hover input{
+    width: 240px;
+  }
+  .buscar input:focus{
+    width: -240px;
+  }
+  
+  /*Header*/
+  
+  header {
+    background-color: #FF3B3F;
+    height: 100px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    box-shadow: 0 0 10px;
+    z-index: 1; /*Coloco el header por encima de todos los elementos de la página*/
+  }
+  
+  #btn-menu {
+    display: none;
+  }
+  
+  header label {
+      display: none;
+      width: 30px;
+      height: 30px;
+      padding: 10px;
+  }
+  
+  header label:hover {
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.3);
+  
+  }
+  .menu ul{
+      margin: 0;
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+  }
+  
+  .menu li {
+      border-right: 0px solid #FFF;
+      border-left: 1px solid #FFF;
+  }
+  
+  .menu li:hover {
+      background: rgba(0, 0, 0, 0.3);
+  }
+  
+  .menu li a {
+      display: block;
+      padding: 15px 20px;
+      color:#EFEFEF;
+      text-decoration: none;
+  }
+  
+  @media (max-width:767px) {
+  
+    header label {
+        display: block;
+        position: absolute;
+        left: 10px;
+    }
+  
+    .menu {
+        position: absolute;
+        background: #555d5f;
+        width: 50%;
+        left: 0px;
+        top: 100px;
+        margin-left: -70%;
+        transition: all 0.2s;
+    }
+  
+    .menu ul {
+        flex-direction: column;
+    }
+  
+    .menu li {
+        border-top: 1px solid #FFF;
+    }
+  
+    #btn-menu:checked ~ .menu {
+        margin: 0;
+    }
+  
+  }
+
+
+.contenedor{
+    background-color: white;
+    display: grid;
+    grid-template: 100px 1fr 1fr  / 50% 50%; /* 3 filas / 2 columas*/
+    grid-template-areas: "barra barra" "mapa mapa" "datos escribinos";  /*  las areas fusionadas */
+    /*padding: 10px;*/ /* para separar el cotenedor de los bordes del body*/
+    /*gap:10px; */
+
+}   
+
+.barra {grid-area: barra;}
+.mapa { grid-area: mapa;}
+.datos { grid-area: datos;}
+.escribinos {grid-area: escribinos;}
+
+
+ /* FORMATO header con GRID */
+
+.header{
+  background-color: #FF3B3F;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0 0 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1; 
+
+  /*font-size: 27px;*/
+  padding: 10px;
+  text-align: center;
+  } 
+
+  /* BOTON CON LUPA BUSCAR */
+
+  .buscar{
+    position: absolute;
+    padding: 10px;
+    left: 40px;
+  }
+
+  @media (max-width:767px) {
+    .buscar {
+      left: 90px;
+    }
+  }
+   div.buscar input{
+    width: 0px;
+    height: 34px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #000;
+    outline: none;
+    border: 1px solid #A9A9A9;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+  }
+
+  .btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #EFEFEF;
+    width: 55px;
+    height: 55px;
+    line-height: 65px;
+    text-align: center;
+    color: #FFF;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+ .buscar:hover input{
+    width: 240px;
+  }
+  .buscar input:focus{
+    width: -240px;
+  }
+
+  .menu ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    border-right: 0px solid #FFF;
+    border-left: 1px solid #FFF;
+}
+
+.menu li:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.menu li a {
+    display: block;
+    padding: 15px 20px;
+    color:#EFEFEF;
+    text-decoration: none;
+}
+
+#boton-menu{display: none;}
+
+div.barra label {
+      display: none;
+      width: 30px;
+      height: 30px;
+      padding: 10px;
+  }
+
+div.barra label:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+
+}
+
+
+@media (max-width:767px) {
+      div.barra label{
+      display: block;
+      position: absolute;
+      left: 10px; }
+
+      .menu {
+        position: absolute;
+        background: #555d5f;
+        width: 50%;
+        left: 0px;
+        top: 100px;
+        margin-left: -70%;
+        transition: all 0.2s;
+    }
+    .menu ul {
+      flex-direction: column;
+    } 
+
+    .menu li {
+      border-top: 1px solid #FFF;
+    }
+
+    #boton-menu:checked ~ .menu {
+      margin: 0;
+  }
+
+    }
+
+
+
+
+
+
+
+
+ .escribinos_item2{
+    text-align: center;
+ }
+
+a:visited{/*color:black;*/
+    text-decoration: none;
+          }     /* defino como quiero que sean los link para que no tenga subrayado */
+
+.item1{ padding-top: 10px; 
+       padding-left: 20%;
+}
+
+.item2{ padding-top: 10px; 
+   
+}
+
+ /* ---------- Para que el mapa sea responsivo / .mapa 2 y .mapa2 iframe --------- */
+
+.mapa2 {
+    overflow:hidden;
+    padding-bottom:400px; /*Reduce este valor si el mapa fuera muy alto, por ejemplo 250px, puedes usar porcentajes, 50%*/
+    position:relative;
+    /* height:0;*/
+    
+}
+.mapa2 iframe{
+    left: 10%;
+    top:0;
+    height:100%;
+    width:80%;
+    position:absolute;
+
+}
+
+textarea {
+    resize: none;
+    width: 75%;
+  }  /* para que el cuadrado de comentarios sea fijo */
+
+  input[type=text]{
+    width: 75%;
+    resize: vertical;
+  }
+  input[type=email]{
+    width: 75%;
+    resize: vertical;
+  }
+
+
+/* ---------------------- */
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .contenedor{   grid-template: 100px 1fr 1fr 1fr / 100%; 
+                   grid-template-areas: "barra" "mapa" "escribinos" "datos"}
+                   .datos {text-align: center;}
+                   .escribinos{text-align: center;}
+                   .item1 {padding: 10px; }
+ 
+             }
+
+
+
+@media only screen and (max-width: 950px) {
+   .contenedor{   grid-template: 100px 1fr 1fr 1fr / 100%; 
+                  grid-template-areas: "barra" "mapa" "escribinos" "datos"}
+                  .datos {text-align: center;}
+                  .escribinos{text-align: center;}
+                  .item1 {padding: 10px; }
+
+            }

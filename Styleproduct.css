@@ -1,0 +1,247 @@
+body {
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center; /*Para que los distintos recuadros se muestren en la misma lineas (divs)*/
+    font-family: arial;
+  }
+    /*Puntos de corte para el grid del body. En el 1ero bajo de 3 a 2 columnas y en el 2do de 2 a 1*/
+      
+      @media (max-width:1200px) {
+        body {
+          grid-template-columns: auto auto;
+        }
+      }
+
+      @media (max-width:767px) {
+        body {
+          grid-template-columns: auto;
+        }
+      }
+
+/*Boton buscar y barra de búsqueda*/
+
+  .buscar{
+    position: fixed;
+    padding: 10px;
+    left: 40px;
+  }
+
+        @media (max-width:767px) {
+          .buscar {
+            left: 90px;
+          }
+        }
+
+  .buscar input{
+    width: 0px;
+    height: 34px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #000;
+    outline: none;
+    border: 1px solid #A9A9A9;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+  }
+
+  .btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #EFEFEF;
+    width: 55px;
+    height: 55px;
+    line-height: 65px;
+    text-align: center;
+    color: #FFF;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .buscar:hover input{
+    width: 240px;
+  }
+  .buscar input:focus{
+    width: -240px;
+  }
+
+/*Header*/
+
+  header {
+    background-color: #FF3B3F;
+    height: 100px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    box-shadow: 0 0 10px;
+    z-index: 1; /*Coloco el header por encima de todos los elementos de la página*/
+  }
+
+  #btn-menu {
+    display: none;
+  }
+
+  header label {
+      display: none;
+      width: 30px;
+      height: 30px;
+      padding: 10px;
+  }
+
+  header label:hover {
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.3);
+
+  }
+  .menu ul{
+      margin: 0;
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+  }
+
+  .menu li {
+      border-right: 0px solid #FFF;
+      border-left: 1px solid #FFF;
+  }
+
+  .menu li:hover {
+      background: rgba(0, 0, 0, 0.3);
+  }
+
+  .menu li a {
+      display: block;
+      padding: 15px 20px;
+      color:#EFEFEF;
+      text-decoration: none;
+  }
+
+@media (max-width:767px) {
+
+    header label {
+        display: block;
+        position: absolute;
+        left: 10px;
+    }
+
+    .menu {
+        position: absolute;
+        background: #555d5f;
+        width: 50%;
+        left: 0px;
+        top: 100px;
+        margin-left: -70%;
+        transition: all 0.2s;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu li {
+        border-top: 1px solid #FFF;
+    }
+
+    #btn-menu:checked ~ .menu {
+        margin: 0;
+    }
+
+}
+
+
+/*Cuadricula de productos*/
+
+#icono_like {
+  color: #afafaf;
+  position: absolute;
+  font-size: 130%;
+  padding: 0.5%;
+}
+
+#icono_like:hover {
+  color: #FF3B3F;
+}
+
+  .filtro {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    display: flex;
+    flex-direction: column;
+    margin-right: 70px;
+    font-size: large;
+  }
+
+        @media (max-width:1200px) {
+          .filtro {
+            grid-column-start: 1;
+            grid-column-end: 3;
+          }  
+        }
+
+        @media (max-width:767px) {
+          .filtro{
+            grid-column-start: 1;
+            grid-column-end: 1;
+          }
+        }
+
+
+  .etiqueta_filtro {
+    font-weight: bold;
+  }
+
+  #sub_categoria {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+
+  #sub_categoria:hover {
+    background-color: rgba(128, 128, 128, 0.195)
+  }
+
+  #producto_individual {
+    padding: 10px; /*Padding dentro del recuedro*/
+    box-shadow: 0 0 7px rgba(128, 128, 128, 0.662); /*Sombra del recuadro*/
+    border-radius: 10px; /*Borde redondeado del recuadro*/
+    text-align: center; /*Alinea el contenido dentro del recuadrio*/
+    width: 250px; /*Ancho de las cajas - FIJO*/
+    margin: 10px; /*Espacio entre los recuadros*/
+    display: grid;
+    grid-template-rows: 1fr 40px 40px 40px;
+  }
+
+  #producto_individual:hover{
+    box-shadow: 0 0 20px rgba(128, 128, 128, 0.662); /*Sombra del recuadro*/
+  }
+  
+  #imagen_producto {
+    width: 80%; /*Ancho de la imagen que sea el 80% del recuadro*/
+    padding: 20px; /*Padding de la imagen para que no quede pegada al borde inferior*/
+  }
+
+  #codigo_producto {
+    border-top: 1px solid rgba(85, 85, 85, 0.3); /*Agrego borde debajo de la imagen*/
+    padding-top: 10px;
+  }
+
+  #precio_producto {
+    color: #FF3B3F;
+  }
+
+  #descripcion_producto {
+    font-size: 80%;
+  }
+
+
+

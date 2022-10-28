@@ -1,0 +1,325 @@
+body {
+    padding-top: 100px;
+    background: #CAEBF2;
+    font-family: arial;
+}
+
+main {
+    background: #EFEFEF;
+    padding: 10px;
+    
+}
+
+/*Barra de menu*/
+
+/*Boton buscar y barra de búsqueda*/
+
+.buscar{
+    position: fixed;
+    padding: 10px;
+    left: 40px;
+  }
+
+        @media (max-width:767px) {
+          .buscar {
+            left: 90px;
+          }
+        }
+
+  .buscar input{
+    width: 0px;
+    height: 34px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #000;
+    outline: none;
+    border: 1px solid #A9A9A9;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+  }
+
+  .btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #EFEFEF;
+    width: 55px;
+    height: 55px;
+    line-height: 65px;
+    text-align: center;
+    color: #FFF;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .buscar:hover input{
+    width: 240px;
+  }
+  .buscar input:focus{
+    width: -240px;
+  }
+
+/*Header*/
+
+  header {
+    background-color: #FF3B3F;
+    height: 100px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    box-shadow: 0 0 10px;
+    z-index: 1; /*Coloco el header por encima de todos los elementos de la página*/
+  }
+
+  #btn-menu {
+    display: none;
+  }
+
+  header label {
+      display: none;
+      width: 30px;
+      height: 30px;
+      padding: 10px;
+  }
+
+  header label:hover {
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.3);
+
+  }
+  .menu ul{
+      margin: 0;
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+  }
+
+  .menu li {
+      border-right: 0px solid #FFF;
+      border-left: 1px solid #FFF;
+  }
+
+  .menu li:hover {
+      background: rgba(0, 0, 0, 0.3);
+  }
+
+  .menu li a {
+      display: block;
+      padding: 15px 20px;
+      color:#EFEFEF;
+      text-decoration: none;
+  }
+
+@media (max-width:767px) {
+
+    header label {
+        display: block;
+        position: absolute;
+        left: 10px;
+    }
+
+    .menu {
+        position: absolute;
+        background: #555d5f;
+        width: 50%;
+        left: 0px;
+        top: 100px;
+        margin-left: -70%;
+        transition: all 0.2s;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu li {
+        border-top: 1px solid #FFF;
+    }
+
+    #btn-menu:checked ~ .menu {
+        margin: 0;
+    }
+
+}
+
+/* Lista imagenes SLIDER*/
+
+ul, li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.slider{
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+ul.slider li{
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    background-color: #CAEBF2;
+    transition: opacity .5s;
+}
+
+ul.slider li img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+ul.slider li:first-child{
+    opacity: 1;
+}
+
+ul.slider li:target{
+    opacity: 1;
+}
+
+/*Botones menu slider*/
+
+.menuslide{
+    text-align: center;
+    margin: 20px;
+}
+
+.menuslide li{
+    display: inline-block;
+    text-align: center;
+}
+
+.menuslide li a{
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: wavy;
+    background-color: #6b6b6b;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    border-radius: 100%;
+}
+
+
+/*Sección Más Vendidos*/
+
+.sección{
+    background-color: #ffffff00;
+    display: grid;
+    grid-template-columns: 30% auto;
+    align-items: center;
+    padding: 20px;
+}
+
+@media (max-width:1000px) {
+    .sección {
+        grid-template-columns: auto;
+    }  
+  }
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+aside{
+    flex: 30px;
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(128, 128, 128, 0.662); /*Sombra del recuadro*/
+    border-radius: 10px;
+    text-align: center;
+}
+
+.imagen_juego{
+    width: 40%;
+}
+
+
+.mas_vendidos{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+}
+
+.productos_mas_vendidos{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+@media (max-width:1400px) {
+    .productos_mas_vendidos {
+        grid-template-columns: auto auto;
+    }  
+  }
+
+  @media (max-width:767px) {
+    .productos_mas_vendidos {
+        grid-template-columns: auto;
+    }
+  }
+
+
+footer{
+    padding: 20px;
+    text-align: center;
+    background-color: #FFF;
+}
+
+/*Cuadricula de productos*/
+
+#icono_like {
+    color: #afafaf;
+    position: absolute;
+    font-size: 130%;
+    padding: 0.5%;
+  }
+  
+  #icono_like:hover {
+    color: #FF3B3F;
+  }
+  
+    #producto_individual {
+        padding: 10px; /*Padding dentro del recuedro*/
+        box-shadow: 0 0 7px rgba(128, 128, 128, 0.662); /*Sombra del recuadro*/
+        background-color: #ffffff;
+        border-radius: 10px; /*Borde redondeado del recuadro*/
+        text-align: center; /*Alinea el contenido dentro del recuadrio*/
+        width: 250px; /*Ancho de las cajas - FIJO*/
+        margin: 10px; /*Espacio entre los recuadros*/
+        display: grid;
+        grid-template-rows: 1fr 40px 40px 40px;
+    }
+  
+    #producto_individual:hover{
+      box-shadow: 0 0 20px rgba(128, 128, 128, 0.662); /*Sombra del recuadro*/
+    }
+    
+    #imagen_producto {
+      width: 80%; /*Ancho de la imagen que sea el 80% del recuadro*/
+      padding: 20px; /*Padding de la imagen para que no quede pegada al borde inferior*/
+    }
+  
+    #codigo_producto {
+      border-top: 1px solid rgba(85, 85, 85, 0.3); /*Agrego borde debajo de la imagen*/
+      padding-top: 10px;
+    }
+  
+    #precio_producto {
+      color: #FF3B3F;
+    }
+  
+    #descripcion_producto {
+      font-size: 80%;
+    }
